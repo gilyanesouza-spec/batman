@@ -22,7 +22,7 @@ justify-content: center;
 .cabecalho-imagem{
 width: 10%;
 display: flex;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 }
 .titulo_site{
