@@ -56,10 +56,11 @@ width: 120px;
 width: 38px;
 padding: 4px 8px;
 }
-.estudante{
-background-image: background-color(#faae43);
-padding: 24px 0;
+.estudante {
+  background-color: #faae43;
+  padding: 24px 0;
 }
+
 
 
 
@@ -91,6 +92,6 @@ padding: 12px 0;
 }
 
 .link{
-color: #fff2a8;
+color: #ffffff;
 text-decoration: none;
 }
