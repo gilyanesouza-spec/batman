@@ -5,13 +5,14 @@ box-sizing: border-box;
 }
 body{
 font-family: "Poppins", sans-serif;
-background-color: #F7D87F;
+background-color: #fff7e2;
 }
 header{
-background-color: #BE1A1A;
+background-color: #5a0a0a;
 color: rgb(243, 229, 211);
 width: 100%;
 padding: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .cabecalho-itens{
 max-width: 1980px;
