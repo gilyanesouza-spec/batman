@@ -1,7 +1,7 @@
 
 
 .menu-navegacao {
-    background-color: #fffdfd;
+    background-color: #ffd39a;
     padding: 15px;
     text-align: center;
 }
@@ -68,7 +68,7 @@
 
 
 .estudante-div {
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -132,7 +132,7 @@
 ========================================= */
 
 #sobre {
-    background-color: #000000;
+    background-color: #fffef6;
 }
 
 
