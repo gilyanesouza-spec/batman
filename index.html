@@ -1,31 +1,31 @@
+```html
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-
-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pagina Pessoal</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<!--header é a parte do cabeçalho do site, é o topo da página-->
+
+<!-- CABEÇALHO -->
 <header class="cabecalho-itens">
 
-<img class="cabecalho_imagem" src="bt.jpg" alt="Logo da Página">
+    <img class="cabecalho_imagem" src="bt.jpg" alt="Logo da Página">
 
-<h1 class="titulo_site">Gilyane</h1>
-<div class="sociais">
-<img class="sociais" src="jcisahero.jpg" alt="logo_nossa_escola">
-</div>
+    <h1 class="titulo_site">Gilyane</h1>
+
+    <div class="sociais">
+        <img class="sociais" src="jcisahero.jpg" alt="logo_nossa_escola">
+    </div>
+
 </header>
-<!--Seção banner 1 é a parte do paragrafo 1 da página-->
-<section class="banner1">
-<img class="escola.image" src="crise.jpg" alt="Banner
-da Escola">
-</section>
 
-<!-- Menu de navegação -->
+
+<!-- MENU DE NAVEGAÇÃO -->
 <nav class="menu-navegacao">
     <ul>
         <li><a href="#inicio">Home</a></li>
@@ -36,116 +36,182 @@ da Escola">
 </nav>
 
 
-<!--Seção estudantes é a parte do paragrafo 2 da página-->
-<section class="estudante">
-<h1 class="estudante_titulo">Filmes favoritos</h1>
-<p> </p>
-<div class="estudantes_todos">
-<div class="estudante-div">
-<img class="estudante-imagem" src="mcphee.jpg" alt="Foto da
+<!-- BANNER -->
+<section class="banner1" id="inicio">
 
-turma do 1CDS do ano de 2023">
+    <img class="escola-image" src="crise.jpg" alt="Banner da Escola">
 
-<h3 class="estudante-nome">A Baba Mcphee</h3>
-<a href="https://share.google/rZ00ZIPalqCWTW656">
-<p> </p>
-<img class="estudante-icone" src="google.jpg" alt="Link do Site da escola"></a>
-
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="spiderman.jpg" alt="Foto da
-turma do 1CDS do ano de 2023">
-
-<h3 class="estudante-nome">Spider Man 2012</h3>
-<a href="https://share.google/q2pOXPCCDezZQYVcZ">
-<p> </p>
-<img class="estudante-icone" src="google.jpg" alt="Link do Site da
-
-escola"></a>
-
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="filme2.jpg" alt="Foto da
-turma do 1CDS do ano de 2023">
-
-<h3 class="estudante-nome">Dama e o vagabundo</h3>
-<a href="https://share.google/fb1ycs0r1p9aBOvuv">
-<p> </p>
-<img class="estudante-icone" src="google.jpg" alt="Link do Site da escola"></a>
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="coraline.jpg" alt="Foto da
-turma do 1CDS do ano de 2023">
-
-<h3 class="estudante-nome">coraline</h3>
-<a href="https://share.google/QFhfoAxeBCEwJqVm8">
-<p> </p>
-<img class="estudante-icone" src="google.jpg" alt="Link do Site da
-
-escola"></a>
-
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="caribe.jpg" alt="Foto da
-turma do 1CDS do ano de 2023">
-
-<h3 class="estudante-nome">Piratas do Caribe</h3>
-<a href="https://share.google/Ar4OzAWcrh1LAQEXg">
-<p> </p>
-<img class="estudante-icone" src="google.jpg" alt="Link do Site da
-
-escola"></a>
-
-</div>
-<div class="estudante-div">
-<img class="estudante-imagem" src="valente.jpg" alt="Foto da turma do 1CDS do ano de 2023">
-<h3 class="estudante-nome">valente</h3>
-<a href="https://share.google/5NgpIEnqC28yT4cCF">
-<p> </p>
-<img class="estudante-icone" src="google.jpg" alt="Link do Site da escola"></a>
-
-<!--seção video-->>
- <div class="container-video">
-  <p>
-    <h3 class="titulo-video"> <iframe width="560" height="315" src="https://www.youtube.com/embed/F9BC-Z1kGa4?si=ESoITe9uAh1l0OG2"
-         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </p>
-</div>
-
-</div>
-</div>
 </section>
-<!--Seção estudantes é a parte do paragrafo 3 da página-->
-<section class="estudante">
-<div class="estudantes_todos">
-<div class="estudante-div">
-<img class="estudante-imagem" src="batman.jpg" alt="Foto da
-turma do 1CDS do ano de 2023">
-<h3 class="estudante-nome">Gigi</h3>
-<a href="https://www.instagram.com/cottenzskyes/tagged/">
-<p> </p>
-<img class="estudante-icone" src="insta.jpg" alt="Link do Site da
-escola"></a>
-
-</div>
 
 
-</div>
-</div>
+<!-- SEÇÃO FILMES -->
+<section class="estudante" id="filmes">
+
+    <h1 class="estudante_titulo">Filmes favoritos</h1>
+
+    <p>Uma seleção dos meus filmes favoritos.</p>
+
+    <div class="estudantes_todos">
+
+        <!-- FILME 1 -->
+        <div class="estudante-div">
+
+            <img class="estudante-imagem" src="mcphee.jpg"
+            alt="A Baba McPhee">
+
+            <h3 class="estudante-nome">A Baba McPhee</h3>
+
+            <a href="https://share.google/rZ00ZIPalqCWTW656">
+                <img class="estudante-icone" src="google.jpg"
+                alt="Link para o filme">
+            </a>
+
+        </div>
+
+
+        <!-- FILME 2 -->
+        <div class="estudante-div">
+
+            <img class="estudante-imagem" src="spiderman.jpg"
+            alt="Spider Man 2012">
+
+            <h3 class="estudante-nome">Spider Man 2012</h3>
+
+            <a href="https://share.google/q2pOXPCCDezZQYVcZ">
+                <img class="estudante-icone" src="google.jpg"
+                alt="Link para o filme">
+            </a>
+
+        </div>
+
+
+        <!-- FILME 3 -->
+        <div class="estudante-div">
+
+            <img class="estudante-imagem" src="filme2.jpg"
+            alt="Dama e o Vagabundo">
+
+            <h3 class="estudante-nome">Dama e o Vagabundo</h3>
+
+            <a href="https://share.google/fb1ycs0r1p9aBOvuv">
+                <img class="estudante-icone" src="google.jpg"
+                alt="Link para o filme">
+            </a>
+
+        </div>
+
+
+        <!-- FILME 4 -->
+        <div class="estudante-div">
+
+            <img class="estudante-imagem" src="coraline.jpg"
+            alt="Coraline">
+
+            <h3 class="estudante-nome">Coraline</h3>
+
+            <a href="https://share.google/QFhfoAxeBCEwJqVm8">
+                <img class="estudante-icone" src="google.jpg"
+                alt="Link para o filme">
+            </a>
+
+        </div>
+
+
+        <!-- FILME 5 -->
+        <div class="estudante-div">
+
+            <img class="estudante-imagem" src="caribe.jpg"
+            alt="Piratas do Caribe">
+
+            <h3 class="estudante-nome">Piratas do Caribe</h3>
+
+            <a href="https://share.google/Ar4OzAWcrh1LAQEXg">
+                <img class="estudante-icone" src="google.jpg"
+                alt="Link para o filme">
+            </a>
+
+        </div>
+
+
+        <!-- FILME 6 -->
+        <div class="estudante-div">
+
+            <img class="estudante-imagem" src="valente.jpg"
+            alt="Valente">
+
+            <h3 class="estudante-nome">Valente</h3>
+
+            <a href="https://share.google/5NgpIEnqC28yT4cCF">
+                <img class="estudante-icone" src="google.jpg"
+                alt="Link para o filme">
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
-<!--Seção rodapé é a parte final da paragrafo 3 da página-->
-<footer class="escola">
-<img class="logo_rodape" src="vaitomando.jpg" alt="Logo
-da Escola">
-<h2 class="escola-título"><a
-class="link" href=""> 
-</a></h2>
-<p></p>
-<p>
 
-</p>
-<p> </p>
+
+<!-- SEÇÃO VÍDEO -->
+<section class="container-video">
+
+    <h2 class="titulo-video">Vídeo</h2>
+
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/F9BC-Z1kGa4?si=ESoITe9uAh1l0OG2"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+
+<!-- SEÇÃO SOBRE -->
+<section class="estudante" id="sobre">
+
+    <h1 class="estudante_titulo">Sobre mim</h1>
+
+    <div class="estudantes_todos">
+
+        <div class="estudante-div">
+
+            <img class="estudante-imagem" src="batman.jpg"
+            alt="Gigi">
+
+            <h3 class="estudante-nome">Gigi</h3>
+
+            <a href="https://www.instagram.com/cottenzskyes/tagged/">
+                <img class="estudante-icone" src="insta.jpg"
+                alt="Instagram">
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RODAPÉ -->
+<footer class="escola" id="contato">
+
+    <img class="logo_rodape" src="vaitomando.jpg"
+    alt="Logo da Escola">
+
+    <h2 class="escola-título">
+        <a class="link" href=""></a>
+    </h2>
+
+    <p></p>
+
 </footer>
+
 </body>
 </html>
+```

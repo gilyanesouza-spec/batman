@@ -1,114 +1,8 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body{
-font-family: "Poppins", sans-serif;
-background-color: #fff7e2;
-}
-header{
-background-color: #5a0a0a;
-color: rgb(243, 229, 211);
-width: 100%;
-padding: 20px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-.cabecalho-itens{
-max-width: 1980px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.cabecalho-imagem{
-width: 10%;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-}
-.titulo_site{
-padding: 50px;
-text-align: center;
-width: 50%;
-font: 31px;
-}
-.sociais{
-display: flex;
-justify-content: flex-end;
-width: 25%;
-padding-right: 30px;
-}
-.banner1{
-display: flex;
-justify-content: center;
-}
-.estudante_titulo{
-padding: 50px;
-text-align: center;
+```css
+/* =========================================
+   MENU DE NAVEGAÇÃO
+========================================= */
 
-}
-.estudante-nome{
-text-align: center;
-}
-.estudante-imagem{
-width: 120px;
-}
-.estudante-icone{
-width: 38px;
-padding: 4px 8px;
-}
-.estudante {
-  background-color: #fff8e6;
-  padding: 24px 0;
-}
-
-
-
-
-.estudante-div{
-text-align: center;
-padding: 24px 0;
-}
-.estudantes_todos{
-display: flex;
-justify-content: space-around;
-}
-.escola{
-background-image: linear-gradient(#000000,#1F150C);
-color: rgb(231, 211, 178);
-display: flex;
-justify-content:center;
-padding: 24px 0;
-text-align:center;
-display:block;
-}
-.escola-titulo{
-padding: 50px;
-text-align: center;
-}
-.logo_rodape{
-height: 80px;
-padding: 12px 0;
-
-}
-
-.link{
-color: #ffffff;
-text-decoration: none;
-}
-.container-video {
-    width: 100%;
-    height: auto; 
-    display: flex;
-    flex-direction: column;   
-    align-items: center;
-    justify-content:center ;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    max-width: 100%;
-
-    /* Menu de navegação */
 .menu-navegacao {
     background-color: #000000;
     padding: 15px;
@@ -123,7 +17,7 @@ text-decoration: none;
 
 .menu-navegacao li {
     display: inline-block;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 .menu-navegacao a {
@@ -131,9 +25,185 @@ text-decoration: none;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .menu-navegacao a:hover {
     color: #ff69b4;
 }
+
+
+/* =========================================
+   BANNER
+========================================= */
+
+.banner1 {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
 }
+
+.banner1 img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   SEÇÃO DE FILMES
+========================================= */
+
+.estudante {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.estudante_titulo {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+/* Grade dos filmes */
+
+.estudantes_todos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* Cada filme */
+
+.estudante-div {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.estudante-div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Imagens dos filmes */
+
+.estudante-imagem {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Nome do filme */
+
+.estudante-nome {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+
+/* Ícone/link */
+
+.estudante-icone {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.estudante-icone:hover {
+    transform: scale(1.15);
+}
+
+
+/* =========================================
+   VÍDEO
+========================================= */
+
+.container-video {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+.titulo-video {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.container-video iframe {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+
+/* =========================================
+   SEÇÃO SOBRE
+========================================= */
+
+#sobre {
+    background-color: #ffffff;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.escola {
+    text-align: center;
+    padding: 30px;
+    background-color: #000000;
+    color: white;
+}
+
+.logo_rodape {
+    max-width: 150px;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+   Para celulares
+========================================= */
+
+@media (max-width: 800px) {
+
+    .estudantes_todos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-navegacao li {
+        margin: 8px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .estudantes_todos {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-navegacao li {
+        display: block;
+        margin: 12px;
+    }
+
+    .estudante {
+        padding: 40px 20px;
+    }
+
+}
+```
