@@ -1,7 +1,7 @@
 
 
 .menu-navegacao {
-    background-color: #EB4C4C;
+    background-color: #838921;
     padding: 15px;
     text-align: center;
 }
@@ -71,13 +71,13 @@
     background-color: #fdfbfb;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba #FF7070;
+    box-shadow: 0 4px 15px rgba #133458;
     transition: 0.3s;
 }
 
 .estudante-div:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba #FF7070;
+    box-shadow: 0 8px 20px rgba #133458;
 }
 
 
@@ -143,7 +143,7 @@
 .escola {
     text-align: center;
     padding: 30px;
-    background-color: #FFA6A6;
+    background-color: #D99B21;
     color: rgb(9, 7, 24);
 }
 
