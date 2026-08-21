@@ -1,7 +1,7 @@
 
 
 .menu-navegacao {
-    background-color: #ffd39a;
+    background-color: #EB4C4C;
     padding: 15px;
     text-align: center;
 }
@@ -18,7 +18,7 @@
 }
 
 .menu-navegacao a {
-    color: rgb(0, 0, 0);
+    color: rgb #FFEDC7;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -71,13 +71,13 @@
     background-color: #fdfbfb;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(255, 205, 141, 0.473);
+    box-shadow: 0 4px 15px rgba #FF7070;
     transition: 0.3s;
 }
 
 .estudante-div:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(255, 219, 153, 0.603);
+    box-shadow: 0 8px 20px rgba #FF7070;
 }
 
 
@@ -143,7 +143,7 @@
 .escola {
     text-align: center;
     padding: 30px;
-    background-color: #000000;
+    background-color: #FFA6A6;
     color: rgb(9, 7, 24);
 }
 
@@ -187,4 +187,3 @@
     }
 
 }
-```
