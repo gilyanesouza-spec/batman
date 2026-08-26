@@ -71,13 +71,13 @@
     background-color: #fdfbfb;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba #000000;
+    box-shadow: 0 4px 15px rgba #3a0303;
     transition: 0.3s;
 }
 
 .estudante-div:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba #000000;
+    box-shadow: 0 8px 20px rgba 78#490606;
 }
 
 
