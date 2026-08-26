@@ -1,7 +1,5 @@
-
-
 .menu-navegacao {
-    background-color: #440a0a;
+    background-color: #953131;
     padding: 15px;
     text-align: center;
 }
@@ -71,13 +69,13 @@
     background-color: #fdfbfb;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba #3a0303;
+    box-shadow: 0 4px 15px rgba(20, 14, 66, 0.473);
     transition: 0.3s;
 }
 
 .estudante-div:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba 78#490606;
+    box-shadow: 0 8px 20px rgba(14, 21, 54, 0.603);
 }
 
 
@@ -143,8 +141,8 @@
 .escola {
     text-align: center;
     padding: 30px;
-    background-color: #ffd37b;
-    color: rgb(255, 237, 197);
+    background-color: #953131;
+    color: rgb(141, 43, 43);
 }
 
 .logo_rodape {
