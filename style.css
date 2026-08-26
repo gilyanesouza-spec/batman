@@ -18,7 +18,7 @@
 }
 
 .menu-navegacao a {
-    color: rgb #000000;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
@@ -26,7 +26,7 @@
 }
 
 .menu-navegacao a:hover {
-    color: #FAF7BB;
+    color: #fffde9;
 }
 
 
