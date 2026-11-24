@@ -189,7 +189,401 @@
             </a>
        
         </div>
+       <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Personagem Pixelado Dançando</title>
+  <!-- Fonte retrô estilo videogame antigo -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #0b0d14;
+      background-image: 
+        linear-gradient(rgba(250, 204, 21, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(250, 204, 21, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+      color: #fff;
+      font-family: 'Press Start 2P', monospace;
+      overflow: hidden;
+    }
 
+    /* Palco Estilo Arcade */
+    .palco {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      background: #131722;
+      border: 4px solid #facc15;
+      box-shadow: 
+        0 0 0 4px #0b0d14,
+        0 0 0 8px #facc15,
+        0 15px 40px rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      image-rendering: pixelated;
+    }
+
+    /* Chão pixelado do palco */
+    .chao {
+      position: absolute;
+      bottom: 45px;
+      width: 220px;
+      height: 8px;
+      background: #334155;
+      box-shadow: 0 4px 0 #1e293b;
+    }
+
+    /* Estrutura do Personagem Pixel Art */
+    .personagem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform-origin: bottom center;
+      z-index: 2;
+    }
+
+    /* Grade 8x8 de Pixels para a Cabeça */
+    .cabeca-pixel {
+      width: 8px;
+      height: 8px;
+      background: transparent;
+      margin-right: 56px; /* Centraliza o bloco 8x8 de 8px cada */
+      margin-bottom: 58px;
+      animation: balancarCabeca 0.4s steps(2) infinite alternate;
+    }
+
+    .tronco-container {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .braco-pixel {
+      width: 12px;
+      height: 32px;
+      background: #475569;
+      border: 2px solid #000;
+    }
+
+    .braco-pixel.esq {
+      animation: bracoEsq 0.4s steps(2) infinite alternate;
+    }
+
+    .braco-pixel.dir {
+      animation: bracoDir 0.4s steps(2) infinite alternate;
+    }
+
+    .torso-pixel {
+      width: 44px;
+      height: 44px;
+      background: #facc15;
+      border: 3px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8px;
+      color: #000;
+      box-shadow: inset -4px -4px 0px rgba(0,0,0,0.25);
+    }
+
+    .pernas {
+      display: flex;
+      gap: 8px;
+    }
+
+    .perna-pixel {
+      width: 14px;
+      height: 26px;
+      background: #94a3b8;
+      border: 3px solid #000;
+      border-top: none;
+    }
+
+    .perna-pixel.esq {
+      animation: pernaEsq 0.4s steps(2) infinite alternate;
+    }
+
+    .perna-pixel.dir {
+      animation: pernaDir 0.4s steps(2) infinite alternate;
+    }
+
+    /* Nota musical pixelada */
+    .musica {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-size: 14px;
+      color: #facc15;
+      animation: piscarNota 0.8s steps(2) infinite;
+    }
+
+    /* --- ANIMAÇÕES EM STEPS (MOVIMENTO RETRÔ) --- */
+    .danca-pulo {
+      animation: pular 0.4s steps(2) infinite alternate;
+    }
+
+    .danca-rebolado {
+      animation: rebolar 0.5s steps(3) infinite alternate;
+    }
+
+    .danca-giro {
+      animation: girar 0.8s steps(4) infinite;
+    }
+
+    @keyframes pular {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-18px); }
+    }
+
+    @keyframes rebolar {
+      0% { transform: translateX(-12px) rotate(-6deg); }
+      100% { transform: translateX(12px) rotate(6deg); }
+    }
+
+    @keyframes girar {
+      0% { transform: scaleX(1); }
+      50% { transform: scaleX(-1); }
+      100% { transform: scaleX(1); }
+    }
+
+    @keyframes balancarCabeca {
+      0% { transform: translateX(-3px); }
+      100% { transform: translateX(3px); }
+    }
+
+    @keyframes bracoEsq {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-12px); }
+    }
+
+    @keyframes bracoDir {
+      0% { transform: translateY(-12px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes pernaEsq {
+      0% { height: 26px; }
+      100% { height: 18px; }
+    }
+
+    @keyframes pernaDir {
+      0% { height: 18px; }
+      100% { height: 26px; }
+    }
+
+    @keyframes piscarNota {
+      0% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0.3; transform: translateY(-6px); }
+    }
+
+    /* Botões Estilo Arcade */
+    .controles {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    button {
+      font-family: 'Press Start 2P', monospace;
+      background: #facc15;
+      color: #090d16;
+      border: 3px solid #000;
+      box-shadow: inset -3px -3px 0px #ca8a04, 0 4px 0 #713f12;
+      padding: 12px 16px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: translateY(3px);
+      box-shadow: inset -2px -2px 0px #ca8a04;
+    }
+
+    .nome-personagem {
+      position: absolute;
+      bottom: 14px;
+      font-size: 9px;
+      color: #facc15;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="palco">
+    <div class="musica">♪ ♫</div>
+    
+    <div class="personagem danca-pulo" id="personagem">
+      <div class="cabeca-pixel" id="cabeca"></div>
+      <div class="tronco-container">
+        <div class="braco-pixel esq" id="bracoEsq"></div>
+        <div class="torso-pixel" id="torso">BAT</div>
+        <div class="braco-pixel dir" id="bracoDir"></div>
+      </div>
+      <div class="pernas">
+        <div class="perna-pixel esq"></div>
+        <div class="perna-pixel dir"></div>
+      </div>
+    </div>
+
+    <div class="chao"></div>
+    <div class="nome-personagem" id="nomePersonagem">BAT-PIXEL</div>
+  </div>
+
+  <div class="controles">
+    <button onclick="trocarPersonagem()">[PERSONAGEM]</button>
+    <button onclick="trocarDanca()">[PASSO]</button>
+  </div>
+
+  <script>
+    // Função auxiliar que converte uma matriz 8x8 em pixels reais via box-shadow
+    function gerarMatrizPixel(matriz, mapaCores) {
+      let sombras = [];
+      const tamanho = 8; // cada pixel tem 8x8px
+      for (let y = 0; y < matriz.length; y++) {
+        for (let x = 0; x < matriz[y].length; x++) {
+          const letra = matriz[y][x];
+          if (letra !== '.' && mapaCores[letra]) {
+            sombras.push(`${x * tamanho}px ${y * tamanho}px 0 ${mapaCores[letra]}`);
+          }
+        }
+      }
+      return sombras.join(', ');
+    }
+
+    const personagens = [
+      {
+        nome: "BAT-PIXEL",
+        sigla: "BAT",
+        corTorso: "#334155",
+        corBraco: "#1e293b",
+        cores: { P: "#0f172a", B: "#ffffff", R: "#f1c27d" },
+        matriz: [
+          "P......P",
+          "PP....PP",
+          "PPPPPPPP",
+          "PPBPPBPP",
+          "PPPPPPPP",
+          "PPRRRRPP",
+          "PPRRRRPP",
+          ".PPPPPP."
+        ]
+      },
+      {
+        nome: "ROBO-8BIT",
+        sigla: "BOT",
+        corTorso: "#38bdf8",
+        corBraco: "#0284c7",
+        cores: { C: "#94a3b8", V: "#ef4444", E: "#1e293b", A: "#facc15" },
+        matriz: [
+          "...AA...",
+          ".CCCCCC.",
+          "CCCCCCCC",
+          "CCVCCVCC",
+          "CCCCCCCC",
+          "CCEEEECC",
+          "CCCCCCCC",
+          ".CCCCCC."
+        ]
+      },
+      {
+        nome: "ALIEN-UFO",
+        sigla: "UFO",
+        corTorso: "#4ade80",
+        corBraco: "#16a34a",
+        cores: { V: "#22c55e", P: "#000000", B: "#ffffff" },
+        matriz: [
+          "..VVVV..",
+          ".VVVVVV.",
+          "VVVVVVVV",
+          "VPPVVPPV",
+          "VPBVVPBV",
+          "VVVVVVVV",
+          ".VVPPVV.",
+          "..VVVV.."
+        ]
+      },
+      {
+        nome: "FANTASMA",
+        sigla: "BOO",
+        corTorso: "#f8fafc",
+        corBraco: "#cbd5e1",
+        cores: { B: "#ffffff", A: "#2563eb", C: "#94a3b8" },
+        matriz: [
+          "..BBBB..",
+          ".BBBBBB.",
+          "BBBBBBBB",
+          "BBAABBAA",
+          "BBAABBAA",
+          "BBBBBBBB",
+          "BBBBBBBB",
+          "B.BB.BB."
+        ]
+      },
+      {
+        nome: "CREEPER-X",
+        sigla: "TNT",
+        corTorso: "#15803d",
+        corBraco: "#166534",
+        cores: { V: "#22c55e", E: "#14532d", P: "#000000" },
+        matriz: [
+          "VEVVVEVV",
+          "VVEVVEVV",
+          "VPPVVPPV",
+          "VPPVVPPV",
+          "VVVPPVVV",
+          "VVPPPPVV",
+          "VVPPPPVV",
+          "VVPVVPVV"
+        ]
+      }
+    ];
+
+    const dancas = ["danca-pulo", "danca-rebolado", "danca-giro"];
+    let dancaAtual = 0;
+    let indiceAtual = -1;
+
+    function trocarPersonagem() {
+      let novoIndice;
+      do {
+        novoIndice = Math.floor(Math.random() * personagens.length);
+      } while (novoIndice === indiceAtual);
+      
+      indiceAtual = novoIndice;
+      const p = personagens[indiceAtual];
+
+      document.getElementById("cabeca").style.boxShadow = gerarMatrizPixel(p.matriz, p.cores);
+      document.getElementById("torso").textContent = p.sigla;
+      document.getElementById("torso").style.background = p.corTorso;
+      document.getElementById("torso").style.color = p.nome === "FANTASMA" ? "#0f172a" : "#facc15";
+      document.getElementById("bracoEsq").style.background = p.corBraco;
+      document.getElementById("bracoDir").style.background = p.corBraco;
+      document.getElementById("nomePersonagem").textContent = p.nome;
+    }
+
+    function trocarDanca() {
+      const el = document.getElementById("personagem");
+      el.classList.remove(dancas[dancaAtual]);
+      dancaAtual = (dancaAtual + 1) % dancas.length;
+      el.classList.add(dancas[dancaAtual]);
+    }
+
+    // Inicia já sorteando um personagem
+    trocarPersonagem();
+  </script>
+
+</body>
+</html>
     </div>
 
 </section>
